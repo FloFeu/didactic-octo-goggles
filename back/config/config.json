@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Dp87@4kan-24mysql",
+    "database": "neil0e",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "dateStrings": "true",
+      "typeCast": "true"
+    },
+    "timezone": "+02:00"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "b04e30a9286ba0",
+    "password": "9e3f28dc",
+    "database": "heroku_ac07cc4396f561e",
+    "host": "eu-cdbr-west-01.cleardb.com",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "dateStrings": "true",
+      "typeCast": "true"
+    },
+    "timezone": "+02:00"
+  }
+}
