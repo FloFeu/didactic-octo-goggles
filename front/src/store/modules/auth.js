@@ -15,17 +15,13 @@ const actions = {
     async register({ dispatch }, form) {
         // console.log("ueeesh")
         await axios.post('auth/signup', form)
-        let userForm = new FormData();
-        userForm.append('email', form.email)
-        userForm.append('username', form.username),
-        userForm.append('password', form.password)
-        await dispatch('login', userForm)
+      
+        await dispatch('login', form)
     },
 
-    async login(user) {
-        console.log(user);
-        // await axios.post('auth/login', user)
-        //await commit('setUser', user.get('username'))
+    async login({commit}, form) {
+        await axios.post('auth/login', form);
+        await commit("setUser", form.email)
     },
 
     async logout({ commit }) {
@@ -41,7 +37,7 @@ const mutations = {
 
     logout(state) {
         state.user = null
-    }
+    },
 
 };
 

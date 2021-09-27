@@ -36,12 +36,10 @@ export default {
         ...mapActions(["login"]),
 
         async submit() {
-            let user = new FormData();
-            user.append("email", this.form.email);
-            user.append("password", this.form.password);
-            console.log(user)
+            
            try {
-                await this.login(user);
+                await this.login(this.form);
+                console.log(this.$store.getters.stateUser);
                 this.$router.push("/");
                 this.showError = false;
             } catch(error) {

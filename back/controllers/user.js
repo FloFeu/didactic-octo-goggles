@@ -18,7 +18,6 @@ exports.signup = (req, res, next) => {
 }
 
 exports.login = (req, res, next) => {
-    console.log(req.body)
     db.user.findOne({
         where: {
             email: req.body.email
