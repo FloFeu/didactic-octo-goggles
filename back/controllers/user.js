@@ -41,8 +41,11 @@ exports.login = (req, res, next) => {
                             },
                             process.env.TOKEN_SECRET,
                             { expiresIn: '12h' }
-                        )
-                    })
+                        ),
+                        username: user.username,
+                        userId: user.uuid
+                    
+                    })  
                 })
         })
 }
